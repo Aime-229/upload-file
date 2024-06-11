@@ -12,9 +12,15 @@ class Upload extends Model
     protected $table = 'uploads';
 
     protected $fillable = [
-        'code_fournisseur',
-        'code_Article',
-        'Qte',
+        'code_planteur',
+        'code_pont',
+        'prix_apromac',
+        'dechargement',
+        'charge_transfert',
+        'prime',
+        'prix_net',
+        'datedebut',
+        'datefin',
         'increment_upload_file'
     ];
 }

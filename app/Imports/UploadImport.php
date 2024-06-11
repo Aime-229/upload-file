@@ -40,6 +40,12 @@ class UploadImport implements ToCollection, WithHeadingRow
 
             
             Upload::create([
+                'code_plpanteur' => $row['Code Planteur'],
+                'code_pont' => $row['Code Pont'],
+                'prix_apromac' => $row['Prix Apromac'],
+                'code_fournisseur' => $row['code_fournisseur'],
+                'code_fournisseur' => $row['code_fournisseur'],
+                'code_fournisseur' => $row['code_fournisseur'],
                 'code_fournisseur' => $row['code_fournisseur'],
                 'code_Article' => $row['code_article'],
                 'Qte' => $row['qte'],

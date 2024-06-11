@@ -35,7 +35,7 @@ class UploadController extends Controller
         
     }
 
-    public function getUploadData($code, $date)
+    public function getUploadData($code)
 {
     
     $uploadData = Upload::where('increment_upload_file', $code)->first();
@@ -44,10 +44,10 @@ class UploadController extends Controller
         return response()->json(['message' => 'Aucune donnée trouvée pour ce code d\'entreprise'], 404);
     }
 
-    $formattedDate = Carbon::parse($date)->toDateString();
+    //$formattedDate = Carbon::parse($date)->toDateString();
 
     $uploads = Upload::where('increment_upload_file', $code)
-                     ->whereDate('created_at', $formattedDate)
+                     //->whereDate('created_at', $formattedDate)
                      ->orderBy('increment_upload_file')
                      ->get(['increment_upload_file as id', 'code_fournisseur', 'Qte', 'code_Article']);
 
